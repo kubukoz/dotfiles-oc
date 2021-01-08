@@ -19,6 +19,7 @@ check_env KUP_USER_ID
 check_env KUP_USER_NAME
 check_env SONATYPE_USERNAME
 check_env SONATYPE_PASSWORD
+check_env GIT_API_TOKEN
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
@@ -70,7 +71,8 @@ HYPHEN_INSENSITIVE="true"
 COMPLETION_WAITING_DOTS="true"
 
 plugins=(
-  zsh-interactive-cd
+  fzf-tab
+  fzf-history
   zsh-ipfs
   git
   zsh-autosuggestions
