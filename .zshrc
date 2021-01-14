@@ -27,6 +27,7 @@ check_env GIT_API_TOKEN
 export SDKMAN_DIR="/Users/j.kozlowski/.sdkman"
 [[ -s "/Users/j.kozlowski/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/j.kozlowski/.sdkman/bin/sdkman-init.sh"
 
+
 ############################################
 # nix
 ############################################
@@ -39,8 +40,7 @@ alias nss="nix-shell"
 ############################################
 
 
-
-
+alias aws='/Users/j.kozlowski/.nix-profile/bin/aws --endpoint-url http://localhost:4566'
 
 
 
@@ -83,9 +83,7 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # font
 export LC_CTYPE="en_US.UTF-8"
 
@@ -106,6 +104,9 @@ fpath=(~/.nix-profile/share/zsh/site-functions $fpath)
 
 autoload -U compinit
 compinit
+
+# I don't know why this needs to be here, but I'm all for it.
+complete -C `which aws_completer` aws
 
 ############################################
 
@@ -160,9 +161,3 @@ export NODE_EXTRA_CA_CERTS=~/certs/lastmile-root.pem
 
 
 
-
-
-
-export PATH=/Users/j.kozlowski/.local/share/fury/bin:/Users/j.kozlowski/.local/share/fury/opt:$PATH # Added by Fury
-fpath=(/Users/j.kozlowski/.local/share/fury/usr/0.18.9/script /Users/j.kozlowski/.local/share/fury/completions $fpath) # Added by Fury
-autoload -U compinit && compinit # Added by Fury
