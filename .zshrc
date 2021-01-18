@@ -21,19 +21,13 @@ check_env SONATYPE_USERNAME
 check_env SONATYPE_PASSWORD
 check_env GIT_API_TOKEN
 
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-#yeah sure -jk
-export SDKMAN_DIR="/Users/j.kozlowski/.sdkman"
-[[ -s "/Users/j.kozlowski/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/j.kozlowski/.sdkman/bin/sdkman-init.sh"
-
-
 ############################################
 # nix
 ############################################
 
 # add nix
 source /Users/j.kozlowski/.nix-profile/etc/profile.d/nix.sh
+export JAVA_HOME=/nix/store/rxi364m9ldlgii8885kngpfj4hpllvn9-graalvm-20.3.0
 
 source $HOME/.nix-profile/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 alias nss="nix-shell"
@@ -158,6 +152,3 @@ export PACT_BROKER_URL_REAL='http://euw1-ospnowpactbroker.eu-west-1.aws.shd.dev.
 export NODE_EXTRA_CA_CERTS=~/certs/lastmile-root.pem
 
 ############################################
-
-
-
