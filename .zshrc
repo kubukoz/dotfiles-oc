@@ -52,7 +52,6 @@ fi
 export PATH="$HOME/bin\
 :/usr/local/bin\
 :/Users/j.kozlowski/.local/bin\
-:/Users/j.kozlowski/Library/Application Support/Coursier/bin\
 :$PATH"
 
 # Path to your oh-my-zsh installation.
